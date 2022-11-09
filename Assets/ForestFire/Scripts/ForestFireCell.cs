@@ -69,16 +69,16 @@ public class ForestFireCell : MonoBehaviour
         if (currentFire != null)
         {
             // enable vfx effect if player is within specified distance
-            if (Vector3.Distance(transform.position, playerCamera.transform.position) > fireVFXDistance)
-            {
-                if (_fireVisualEffect.enabled == true)
-                    _fireVisualEffect.enabled = false;
-            }
-            else
-            {
-                if (_fireVisualEffect.enabled == false)
-                    _fireVisualEffect.enabled = true;
-            }
+            //if (Vector3.Distance(transform.position, playerCamera.transform.position) > fireVFXDistance)
+            //{
+            //    if (_fireVisualEffect.enabled == true)
+            //        _fireVisualEffect.enabled = false;
+            //}
+            //else
+            //{
+            //    if (_fireVisualEffect.enabled == false)
+            //        _fireVisualEffect.enabled = true;
+            //}
         }
     }
 

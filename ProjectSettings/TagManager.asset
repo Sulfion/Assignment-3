@@ -7,6 +7,7 @@ TagManager:
   - Ignite
   - Animal
   - Fire
+  - ForestFire3D
   layers:
   - Default
   - TransparentFX

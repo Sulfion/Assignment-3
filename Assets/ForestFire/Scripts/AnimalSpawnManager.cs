@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AnimalSpawnManager : MonoBehaviour
 {
-    private ForestFire3D forestFire3D;
     public GameObject animalPrefab;
 
     //variables used for generating random spawn positions.
@@ -13,16 +12,15 @@ public class AnimalSpawnManager : MonoBehaviour
     private float spawnRangeX = 157.0f;
     private float spawnPosY = 0.7f;
     private float minSpawnRange = 0.0f;
+    public int amountSpawned = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        SpawnRandomAnimal();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        if(amountSpawned == 0)
+        {
+            StartCoroutine(SpawnAnimalRoutine());
+        }
 
     }
 
@@ -37,10 +35,14 @@ public class AnimalSpawnManager : MonoBehaviour
         return randomPos;
     }
 
-    //instantiate animal at generated random spawn position
-    void SpawnRandomAnimal()
+    //use coroutine to spawn 10 chickens in random locations using generated spawn position
+    IEnumerator SpawnAnimalRoutine()
     {
-        Instantiate(animalPrefab, GenerateSpawnPosition(), animalPrefab.transform.rotation);
-        Instantiate(animalPrefab, GenerateSpawnPosition(), animalPrefab.transform.rotation);
+        while (amountSpawned < 10)
+        {
+            Instantiate(animalPrefab, GenerateSpawnPosition(), animalPrefab.transform.rotation);
+            amountSpawned++;
+            yield return null;
+        }
     }
 }

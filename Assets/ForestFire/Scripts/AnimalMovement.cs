@@ -6,7 +6,7 @@ public class AnimalMovement : MonoBehaviour
 {
     private Rigidbody animalRb;
 
-    public float movementStrength = 500.0f;
+    [SerializeField] private float movementStrength = 150.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -14,12 +14,7 @@ public class AnimalMovement : MonoBehaviour
         animalRb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    //knock chickens away from fire on collision
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Fire"))

@@ -7,7 +7,7 @@ public class AnimalSpawnManager : MonoBehaviour
     public GameObject animalPrefab;
 
     //variables used for generating random spawn positions.
-    //X&Z board size from ForeFire3D script are not stored, so needed to make own
+    //X&Z board size from ForeFire3D script are not stored, so needed to make new ones
     private float spawnRangeZ = 157.0f;
     private float spawnRangeX = 157.0f;
     private float spawnPosY = 0.7f;
@@ -38,7 +38,7 @@ public class AnimalSpawnManager : MonoBehaviour
     //use coroutine to spawn 10 chickens in random locations using generated spawn position
     IEnumerator SpawnAnimalRoutine()
     {
-        while (amountSpawned < 10)
+        while (amountSpawned < 30)
         {
             Instantiate(animalPrefab, GenerateSpawnPosition(), animalPrefab.transform.rotation);
             amountSpawned++;

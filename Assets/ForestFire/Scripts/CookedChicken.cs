@@ -7,8 +7,8 @@ using UnityEngine.AI;
 
 public class CookedChicken : MonoBehaviour
 {
-    public ForestFire3D forestFire3D;
     private NavMeshAgent nma = null;
+    public ForestFire3D forestFire3D;
     public GameObject closestFireGameObject;
 
     public float stopDistance;
@@ -30,6 +30,7 @@ public class CookedChicken : MonoBehaviour
         FindNearestFire();
     }
 
+    //find nearest fire and send chicken to it
     private void FindNearestFire()
     {
         // iterate through each cell in the rows and columns
@@ -45,7 +46,7 @@ public class CookedChicken : MonoBehaviour
                     }
 
 
-                    // compare distance between elephant and current closest fire object and see if there is another fire object closer
+                    // compare distance between chicken and current closest fire object and see if there is another fire object closer
                     if (Vector3.Distance(transform.position, closestFireGameObject.transform.position)
                         > Vector3.Distance(transform.position, forestFire3D.cellGameObjects[xCount, yCount].transform.position))
                     {

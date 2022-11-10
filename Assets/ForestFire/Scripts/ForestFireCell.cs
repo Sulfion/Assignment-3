@@ -65,6 +65,7 @@ public class ForestFireCell : MonoBehaviour
     // Update is a built-in Unity function that is called once per frame 
     private void Update()
     {
+        //this is commented out as it stops fire from generating on play
         // check whether current fire variable has been assigned 
         if (currentFire != null)
         {

@@ -554,6 +554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 755736b763309a045bc0cce41e2a8c27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bumperCornerPrefab: {fileID: 0}
 --- !u!136 &637399390103262092
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class HealthManager : MonoBehaviour
 
     [SerializeField] private float fireDamage = 1.0f;
 
-    private float animalMaxHealth = 5.0f;
+    private float animalMaxHealth = 20.0f;
     private float animalCurrentHealth;
 
     // Start is called before the first frame update
